@@ -2,14 +2,14 @@
 
 set -euo pipefail
 
-# ====================== CONFIG ======================
+# CONFIG
 SHELL_SRC="https://github.com/AdiAmbassador/caelestia-shell-aw"
 CLI_SRC="https://github.com/AdiAmbassador/caelestia-cli-aw"
 
 SHELL_DEST="/etc/xdg/quickshell/caelestia"
 CLI_DEST="$(python3 -c 'import site; print(site.getsitepackages()[0])')/caelestia"
 
-# ====================== COLORS & STYLING ======================
+# COLORS & STYLING
 GREEN="\033[1;32m"
 BLUE="\033[1;34m"
 CYAN="\033[1;36m"
@@ -20,10 +20,10 @@ RESET="\033[0m"
 BOLD="\033[1m"
 DIM="\033[2m"
 
-# Fancy borders
+# borders
 BORDER="━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 
-# ====================== HELPER FUNCTIONS ======================
+# HELPER FUNCTIONS
 spinner() {
     local pid=$1
     local delay=0.1
@@ -76,13 +76,13 @@ cleanup() {
 
 trap cleanup EXIT
 
-# ====================== START ======================
+# main
 header
 
 echo -e "${MAGENTA}Starting installation of Caelestia Animated Wallpaper patches...${RESET}"
 echo
 
-# Clone repositories
+# Clone repo
 log "Cloning shell fork..."
 git clone --depth 1 "$SHELL_SRC" /tmp/caelestia-shell-fork >/dev/null 2>&1 &
 spinner $! "Cloning shell modules"
@@ -145,7 +145,7 @@ echo -e "${GREEN}$BORDER${RESET}"
 echo -e "${BOLD}${GREEN}                                      Installation Complete! ${RESET}"
 echo -e "${GREEN}$BORDER${RESET}"
 echo
-echo -e "📁 ${CYAN}Add your videos to:${RESET} ${BOLD}~/Pictures/Wallpapers/Animated${RESET}"
-echo -e "🔄 Open the launcher and ${YELLOW}refresh thumbnails${RESET} to see your videos."
+echo -e " ${CYAN}Add your videos to:${RESET} ${BOLD}~/Pictures/Wallpapers/Animated${RESET}"
+echo -e " Open the launcher and ${YELLOW}refresh thumbnails${RESET} to see your videos."
 echo
 echo

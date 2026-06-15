@@ -112,9 +112,7 @@ Open the launcher (`Super, >wallpaper ` by default), switch to the **Animated** 
 
 Thumbnails are cached at `~/.cache/caelestia/videothumbs/` and only regenerate when a video file is modified.
 
-### Setting a wallpaper
 
-Scroll through the animated picker, the wallpaper updates live as you browse. Click a tile to confirm the selection. The color scheme updates automatically to match the new wallpaper.
 
 ------
 
@@ -152,7 +150,7 @@ Current v1.0 of Caelestia-AW patches Caelestia-2.0.2.
 
 ### Updating vanilla Caelestia
 
-If you update `caelestia-shell` or `caelestia-cli` via your AUR helper, the patch will be overwritten. Always re-run `patch.sh` after an upstream Caelestia update:
+If you update `caelestia-shell` or `caelestia-cli` via your AUR helper, the patch will be overwritten.
 
 ```bash
 yay -Syu caelestia-shell caelestia-cli   # update upstream
@@ -161,7 +159,7 @@ bash patch.sh                             # re-apply AW patch
 
 ------
 
-## 
+
 
 ## Uninstalling
 
@@ -209,4 +207,3 @@ For complete installation instructions, configuration options, and documentation
 
 https://github.com/caelestia-dots/caelestia
 
-#### 
