@@ -22,7 +22,7 @@ https://github.com/user-attachments/assets/47f61a0c-7610-493e-8a5c-aeed5731cdc2
 
 Caelestia-AW is a patch that adds **native animated/video wallpaper support** to Caelestia. It extends the wallpaper picker with a dedicated animated section, generates thumbnails for video files, and integrates fully with Caelestia's Material You dynamic color system.
 
-This repo contains the  patcher, and uninstaller. The actual code lives in two companion repos:
+This repo contains the  patcher. The actual code lives in two companion repos:
 
 | Repo                                                         | What it changes                                              |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -172,19 +172,7 @@ yay -S caelestia-shell caelestia-cli --overwrite '*'   # update upstream and ove
 bash patch.sh                             # re-apply AW patch
 ```
 
-------
 
-
-
-## Uninstalling
-
-To revert to vanilla Caelestia:
-
-```bash
-bash uninstall.sh
-```
-
-This reinstalls the official `caelestia-shell` and `caelestia-cli` packages from AUR, removes the hardware decoding environment variable from your Hyprland config, and optionally clears the thumbnail cache. Your wallpaper library and Hyprland configuration are untouched.
 
 ------
 
