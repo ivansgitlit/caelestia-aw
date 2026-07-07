@@ -3,8 +3,8 @@
 set -euo pipefail
 
 # CONFIG
-SHELL_REPO="https://github.com/AdiAmbassador/caelestia-shell-aw.git"
-CLI_REPO="https://github.com/AdiAmbassador/caelestia-cli-aw.git"
+SHELL_REPO="https://github.com/ivansgitlit/caelestia-shell-aw.git"
+CLI_REPO="https://github.com/ivansgitlit/caelestia-cli-aw.git"
 
 SHELL_DEST="/etc/xdg/quickshell/caelestia"
 CLI_DEST="$(python3 -c 'import site; print(site.getsitepackages()[0])')/caelestia"
